@@ -34,9 +34,9 @@ except ModuleNotFoundError as e:
 os.system("cls||clear")
 
 intro = (
-    Fore.LIGHTCYAN_EX
+    Fore.LIGHTBLUE_EX
     + """ 
-    Tricerabot made by amyy#4444
+    Tricerabots, proudly made by amyy#4444. For support on errors, bugs join our discord - https://discord.gg/Wrdm6gAgaR. Have a good time using the bot.
                                                                     
  """
 )
@@ -119,7 +119,7 @@ with open("config.json") as f:
             Fore.RED
             + " [ERROR] "
             + Fore.RESET
-            + "There was an error in one of the bot's files! (config.json). If you have problems trying to fix it, join the discord support server for help - https://discord.gg/ugUTsaz"
+            + "There was an error in one of the bot's files! (config.json). If you have problems trying to fix it, contact support."
         )
         print(Fore.LIGHTRED_EX + f"\n {e}")
         exit(1)
@@ -133,7 +133,7 @@ with open("config.json") as f:
             Fore.RED
             + " [ERROR] "
             + Fore.RESET
-            + "There was an error in one of the bot's files! (info.json) If you have problems trying to fix it, join the discord support  - https://discord.gg/ugUTsaz"
+            + "There was an error in one of the bot's files! (info.json) If you have problems trying to fix it, contact support."
         )
         print(Fore.LIGHTRED_EX + f"\n {e}")
         exit(1)
@@ -309,7 +309,7 @@ async def event_party_member_confirm(confirmation: fortnitepy.PartyJoinConfirmat
 async def event_party_member_join(member: fortnitepy.PartyMember) -> None:
     
     await client.party.send(
-        f" Hello! {member.display_name}"
+        f" Thanks for using {member.display_name} we hope you enjoy! - https://discord.gg/Wrdm6gAgaR"
     )
     await client.party.me.set_emote(asset="eid_wave")
     await asyncio.sleep(1.25)
@@ -405,8 +405,8 @@ async def event_command_error(ctx, error):
         print(error)
 
 @client.command()
-async def gummy(ctx):
-    await ctx.send('Hello Gummy is my owner he well love it if you can use code zfn in the fortnite item shop')
+async def hi(ctx):
+    await ctx.send('Hello')
     
     
     
