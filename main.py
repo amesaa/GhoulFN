@@ -36,7 +36,7 @@ os.system("cls||clear")
 intro = (
     Fore.LIGHTBLUE_EX
     + """ 
-    Tricerabots, proudly made by amyy#4444. For support on errors, bugs join our discord - https://discord.gg/Wrdm6gAgaR. Have a good time using the bot.
+    Tricerabots, created by amy.#3333 For support on errors, bugs join our discord - https://discord.gg/pDgNVVMuDq. Have a good time using the bot.
                                                                     
  """
 )
@@ -309,9 +309,9 @@ async def event_party_member_confirm(confirmation: fortnitepy.PartyJoinConfirmat
 async def event_party_member_join(member: fortnitepy.PartyMember) -> None:
     
     await client.party.send(
-        f" Thanks for using {member.display_name} we hope you enjoy! - https://discord.gg/Wrdm6gAgaR"
+        f" Youtube: vquorx"
     )
-    await client.party.me.set_emote(asset="eid_wave")
+    await client.party.me.set_emote(asset="EID_CandyDance")
     await asyncio.sleep(1.25)
     await client.party.me.clear_emote()
     await client.party.set_privacy(fortnitepy.PartyPrivacy.PUBLIC)
