@@ -1,11 +1,11 @@
 {
     "email": "",
     "password": "",
-    "cid": "CID_871_Athena_Commando_F_StreetFashionGarnet",
-    "avatar": "cid_005_athena_commando_m_default",
+    "cid": "CID_155_Athena_Commando_F_Gumshoe",
+    "avatar": "CID_046_Athena_Commando_F_HolidaySweater",
     "bid": "BID_004_BlackKnight",
     "pid": "Pickaxe_Lockjaw",
-    "banner": "otherbanner28",
+    "banner": "BRS10Astronaut",
     "banner_color": "defaultcolor22",
     "level": "1",
     "bp_tier": "1",
@@ -15,6 +15,6 @@
     "friendaccept": "true",
     "joinoninvite": "false",
     "AdminPassword": "0001",
-    "FullAccess": []
+    "FullAccess": [""]
 }
 
