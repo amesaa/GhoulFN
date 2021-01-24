@@ -36,7 +36,7 @@ os.system("cls||clear")
 intro = (
     Fore.LIGHTBLUE_EX
     + """ 
-    Tricerabots, created by amy.#3333 For support on errors, bugs join our discord - https://discord.gg/pDgNVVMuDq. Have a good time using the bot.
+    Tricerabots, created by h20#8079. Discord coming soon.
                                                                     
  """
 )
