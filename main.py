@@ -36,8 +36,8 @@ os.system("cls||clear")
 intro = (
     Fore.LIGHTBLUE_EX
     + """ 
-    BoatFN, created by amesa#0001 and gummy bear
-#6969, Join our discord : ) bit.ly/boatfndisc
+    GhoulFN, created by amesa#0001 and gummy bear
+#6969, Join our discord : ) bit.ly/GhoulFN
                                                                     
  """
 )
