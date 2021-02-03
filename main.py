@@ -24,7 +24,7 @@ try:
 except ModuleNotFoundError as e:
     print(e)
     print(
-        Fore.RED
+        Fore.LIGHTYELLOW_EX
         + " • "
         + Fore.RESET
         + 'Failed to import 1 or more modules. Run "INSTALL PACKAGES.bat'
@@ -117,12 +117,12 @@ with open("config.json") as f:
         data = json.load(f)
     except json.decoder.JSONDecodeError as e:
         print(
-            Fore.RED
+            Fore.LIGHTYELLOW_EX
             + " [ERROR] "
             + Fore.RESET
             + "There was an error in one of the bot's files! (config.json). If you have problems trying to fix it, contact support."
         )
-        print(Fore.LIGHTRED_EX + f"\n {e}")
+        print(Fore.LIGHTYELLOW_EX + f"\n {e}")
         exit(1)
 
 
@@ -131,12 +131,12 @@ with open("config.json") as f:
         info = json.load(f)
     except json.decoder.JSONDecodeError as e:
         print(
-            Fore.RED
+            Fore.LIGHTYELLOW_EX
             + " [ERROR] "
             + Fore.RESET
             + "There was an error in one of the bot's files! (info.json) If you have problems trying to fix it, contact support."
         )
-        print(Fore.LIGHTRED_EX + f"\n {e}")
+        print(Fore.LIGHTYELLOW_EX + f"\n {e}")
         exit(1)
 
 
@@ -179,11 +179,11 @@ async def event_ready():
     os.system("cls||clear")
     print(intro)
     print(
-        Fore.LIGHTCYAN_EX
+        Fore.LIGHTBLUE_EX
         + " • "
         + Fore.RESET
         + "Client is called "
-        + Fore.LIGHTCYAN_EX
+        + Fore.LIGHTBLUE_EX
         + f"{client.user.display_name}"
     )
 
@@ -219,11 +219,11 @@ async def event_party_invite(invite):
         try:
             await invite.accept()
             print(
-                Fore.LIGHTCYAN_EX
+                Fore.LIGHTBLUE_EX
                 + " • "
                 + Fore.RESET
                 + "Accepted party invite from"
-                + Fore.LIGHTCYAN_EX
+                + Fore.LIGHTBLUE_EX
                 + f"{invite.sender.display_name}"
             )
         except Exception:
@@ -232,20 +232,20 @@ async def event_party_invite(invite):
         if invite.sender.id in info["FullAccess"]:
             await invite.accept()
             print(
-                Fore.LIGHTCYAN_EX
+                Fore.LIGHTBLUE_EX
                 + " • "
                 + Fore.RESET
                 + "Accepted party invite from "
-                + Fore.LIGHTCYAN_EX
+                + Fore.LIGHTBLUE_EX
                 + f"{invite.sender.display_name}"
             )
         else:
             print(
-                Fore.LIGHTCYAN_EX
+                Fore.LIGHTBLUE_EX
                 + " • "
                 + Fore.RESET
                 + "Never accepted party invite from "
-                + Fore.LIGHTCYAN_EX
+                + Fore.LIGHTBLUE_EX
                 + f"{invite.sender.display_name}"
             )
 
@@ -267,11 +267,11 @@ async def event_friend_request(request):
             try:
                 await request.accept()
                 print(
-                    Fore.LIGHTCYAN_EX
+                    Fore.LIGHTBLUE_EX
                     + " • "
                     + Fore.RESET
                     + "Accepted friend request from "
-                    + Fore.LIGHTCYAN_EX
+                    + Fore.LIGHTBLUE_EX
                     + f"{request.display_name}"
                     + Fore.LIGHTBLACK_EX
                     + f" ({lenFriends()})"
@@ -346,7 +346,7 @@ async def event_party_member_leave(member):
 @client.event
 async def event_party_message(message):
     if message.author.id in info["FullAccess"]:
-        name = Fore.LIGHTCYAN_EX + f"{message.author.display_name}"
+        name = Fore.LIGHTBLUE_EX + f"{message.author.display_name}"
     else:
         name = Fore.RESET + f"{message.author.display_name}"
     print(Fore.GREEN + " • [Party] " + f"{name}" + Fore.RESET + f": {message.content}")
@@ -1565,10 +1565,10 @@ if (data['email'] and data['password']) and (data['email'] != "" and data['passw
         keep_alive()
         client.run()
     except fortnitepy.errors.AuthException as e:
-        print(Fore.RED + ' [ERROR] ' + Fore.RESET + f'{e}')
+        print(Fore.LIGHTYELLOW_EX + ' [ERROR] ' + Fore.RESET + f'{e}')
     except ModuleNotFoundError:
         print(e)
-        print(Fore.RED + f'[-] ' + Fore.RESET + 'Failed to import 1 or more modules. Run "INSTALL PACKAGES.bat')
+        print(Fore.LIGHTYELLOW_EX + f'[-] ' + Fore.RESET + 'Failed to import 1 or more modules. Run "INSTALL PACKAGES.bat')
         exit()
 else:
-    print(Fore.RED + ' [ERROR] ' + Fore.RESET + 'Can not log in, as no accounts credentials were provided.') 
+    print(Fore.LIGHTYELLOW_EX + ' [ERROR] ' + Fore.RESET + 'Can not log in, as no accounts credentials were provided.') 
